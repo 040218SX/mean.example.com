@@ -19,7 +19,20 @@ var User = new Schema({
     admin: {
         type: Boolean,
         default: false
+    },
+    created:{
+        type: Date,
+        default: Date.now
+    },
+    modified:{
+        type: Date,
+        default: Date.now
     }
+});
+
+User.pre('save', function(next){
+    this.modified = new Date().toISOString();
+    next();
 });
 
 User.plugin(uniqueValidator);
