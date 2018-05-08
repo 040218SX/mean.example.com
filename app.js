@@ -102,7 +102,8 @@ app.use(function(req,res,next){
   var whitelist = [
     '/',
     '/favicon.ico',
-    '/users/login'
+    '/users/login',
+    '/users/register'
   ];
 
   if(whitelist.indexOf(req.url) !== -1){
