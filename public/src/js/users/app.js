@@ -103,7 +103,14 @@ function viewUser(id){
                 </div>
 
                 <input type="submit" value="Submit">
-            </form>`;
+            </form>
+            
+            <div>
+                <a href="#deleteUser-${user._id}"
+                    onclick="deleteUser('${user._id}');"
+                >Delete</a>
+            </div>
+            `;
 
         var editUser = document.getElementById('editUser');
         editUser.addEventListener('submit', function(e){
@@ -188,6 +195,24 @@ function createUser(){
             }
         }
     });
+}
+
+function deleteUser(id){
+    if(confirm('Are you sure?')){
+        
+        var url = 'http://localhost:3000/api/users/' + id;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('DELETE', url);
+        xhr.send();
+    
+        xhr.onload = function(){
+            let data = JSON.parse(xhr.response);
+            if(data.success===true){
+                viewIndex();
+            }
+        }
+    }
 }
 
 var hash = window.location.hash.substr(1);
