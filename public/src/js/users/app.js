@@ -105,9 +105,10 @@ function viewUser(id){
                 <input type="submit" value="Submit">
             </form>
             
-            <div>
+            <div class="actions">
                 <a href="#deleteUser-${user._id}"
                     onclick="deleteUser('${user._id}');"
+                    class="text-danger"
                 >Delete</a>
             </div>
             `;

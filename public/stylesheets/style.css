@@ -56,4 +56,16 @@ a.button{
   text-decoration: none;
   appearance: button;
   color: #000;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+.actions{
+  text-align: right;
+}
+
+.text-danger {
+  color: #990000;
 }
