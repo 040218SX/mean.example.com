@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser');
 var Article = require('../../models/article');
 
+var bodyParser = require('body-parser');
 /* GET articles listing. */
 router.get('/', function(req, res){
 
