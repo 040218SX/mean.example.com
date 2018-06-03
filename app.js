@@ -98,7 +98,8 @@ app.use(function(req,res,next){
     '/',
     '/favicon.ico',
     '/users/login',
-    '/users/register'
+    '/users/register',
+    '/api/users/register'
   ];
 
   if(whitelist.indexOf(req.url) !== -1){
