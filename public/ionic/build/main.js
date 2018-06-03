@@ -747,7 +747,7 @@ var httpOptions = {
 var UserProvider = /** @class */ (function () {
     function UserProvider(http) {
         this.http = http;
-        this.url = 'http://jasonsnider.net/api/users';
+        this.url = 'https://jasonsnider.net/api/users';
     }
     UserProvider.prototype.getUser = function (id) {
         return this.http.get(this.url + "/" + id);
@@ -799,7 +799,7 @@ var httpOptions = {
 var ArticleProvider = /** @class */ (function () {
     function ArticleProvider(http) {
         this.http = http;
-        this.url = 'http://jasonsnider.net/api/articles';
+        this.url = 'https://jasonsnider.net/api/articles';
     }
     ArticleProvider.prototype.getArticle = function (id) {
         return this.http.get(this.url + "/" + id);
